@@ -88,8 +88,7 @@ def test_get_user_non_admin(pact, client):
     with pact:
         result = client.get_user('UserA')
 
-    # assert something with the result, for ex, did I process 'result' properly?
-    # or was I able to deserialize correctly? etc.
+    assert result == expected
 
 
 def test_get_non_existing_user(pact, client):
